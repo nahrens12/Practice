@@ -4,75 +4,63 @@ import static org.junit.Assert.assertEquals;
 public class LibraryTest {
 
 
-    @Test
-    public void checkOutTest()
-    {
-        Book b1 = new Book();
-        Member m1 = new Member();
-        //m1.booklist.add(b1);
-        m1.checkOut(b1);
-        assertEquals(1, m1.list.size());
-    }
+    List l = new List();
 
-    @Test
-    public void checkInTest()
-
-    {
-
-        Book b1 = new Book();
-        Member m1 = new Member();
-        m1.checkIn(b1);
-        assertEquals(1, m1.list.size());
-    }
+//    @Test
+//    public void checkOutTest()
+//    {
+//        Book b1 = new Book();
+//        Member m1 = new Member();
+//        //m1.booklist.add(b1);
+//        m1.checkOut(b1);
+//        assertEquals(1, m1.list.size());
+//    }
+//
+//    @Test
+//    public void checkInTest()
+//
+//    {
+//
+//        Book b1 = new Book();
+//        Member m1 = new Member();
+//        m1.checkIn(b1);
+//        assertEquals(1, m1.list.size());
+//    }
 
     @Test
     public void addItemTest(){
        // 4 item to be stored in the Library
-        Book b1 = new Book();
-        Book b2 = new Book();
-        Newspaper n1 = new Newspaper();
-        Newspaper n2 = new Newspaper();
+        Item b1 = new Book(12, "red", "comedy");
 
-        //Library List currently empty
-        Library list = new Library();
-
-        //Add first item to the library
-        libraryList.addItem(b1);
-
+        int size = List.itemLi.size();
+        List.addItem(b1);
+        //List.addItem(b2);
+        //List.addItem(16, 4555, 34);
+        assertEquals(List.itemLi.size(), size+1);
 
     }
 
     @Test
     public void removeItemTest(){
-        //my library has a list
-        // 4 items in it
-        // i have to create 4 things then add them
-        // remove item
-        //so there should be 3
+        //List.addBook(12, "red", "comedy");
+        Item b2 = new Book(14, "blue", "action");
+        List.addItem(b2);
+        int size = List.itemLi.size();
+      List.removeItem(14);
+      assertEquals(List.itemLi.size(), size-1);
 
-        //New library created
-        Library libraryList = new Library();
-
-        //items to store in the library
-        Book b1 = new Book();
-        Book b2 = new Book();
-        Newspaper n1 = new Newspaper();
-        Newspaper n2 = new Newspaper();
-
-        //Where the items are stored
-        libraryList.list.size();
-
-
-        //removing item from the library
-        libraryList.removeItem(b1);
-
-    }
-
-
-    @Test
-    public void updateItemTest(){
-        // items updated in the library list 
-    }
+  }
+//
+//
+//    @Test
+//    public void updateItemTest(){
+//
+//      List.addBook(12, "red", "comedy");
+//          List.updateItem(12);
+//          assertEquals();
+//    }
 
 }
+
+
 

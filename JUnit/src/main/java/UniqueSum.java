@@ -1,7 +1,7 @@
 public class UniqueSum {
 
 
-    public static int UniqueSum(int a, int b, int c) {
+    public  int UniqueSum(int a, int b, int c) {
 
         if (a == b && b == c ) {
             return 0;
